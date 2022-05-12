@@ -1,0 +1,20 @@
+body {
+    background: bisque;
+
+}
+
+h2 {
+    color: brown;
+}
+.footer {
+    padding: 7px;
+    background: brown;
+    height: 30px;
+    line-height: 30px;
+    color: #ffffff;
+    font-family: Roboto;
+    text-align: center;
+    margin-top: 150px;
+    font-size: 10px;
+
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>All Users</title>
+    <link rel="stylesheet" th:href="@{/style/style.css}"/>
+</head>
+<body>
+<div align="center">
+    <h2>Users list</h2>
+
+    <h3><a th:href="@{'/add'}">Add new user</a></h3>
+
+<table border="1" cellpadding="7">
+<thead>
+<tr>All Users</tr>
+</thead>
+<tbody>
+<tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>E-mail</th>
+    <th>Address</th>
+    <th>Action</th>
+</tr>
+<tr th:each="user : ${usersList}">
+    <td th:text="${user.id}"></td>
+    <td th:text="${user.name}"></td>
+    <td th:text="${user.email}"></td>
+    <td th:text="${user.address}"></td>
+
+    <td>
+        <a th:href="@{'/edit/'+${user.id}}">Edit</a>
+        &nbsp;&nbsp;&nbsp;
+        <a th:href="@{'/delete/'+${user.id}}">Delete</a>
+    </td>
+</tr>
+</tbody>
+</table>
+
+</div>
+<div class="footer">Copyright &copy; Valdemiro 2022</div>
+</body>
+</html>

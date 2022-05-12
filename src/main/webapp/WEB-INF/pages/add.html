@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add User</title>
+    <link rel="stylesheet" th:href="@{/style/style.css}"/>
+</head>
+<body>
+<div align="center">
+    <h2>Add user</h2>
+<form th:action="@{/add}" method="post">
+    <p><label for="name">Name</label></p>
+    <p><input type="text" id="name" name="name" required></p>
+    <p><label for="email">E-mail</label></p>
+    <p><input type="text" id="email" name="email" required></p>
+    <p><label for="address">Address</label></p>
+    <p><input type="text" id="address" name="address" required></p>
+    <p>
+        <input type="submit" value="add">
+    </p>
+</form>
+</div>
+<div class="footer">Copyright &copy; Valdemiro 2022</div>
+</body>
+</html>
